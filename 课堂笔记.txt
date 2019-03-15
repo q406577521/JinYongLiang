@@ -1,0 +1,47 @@
+selenium:
+
+1. 定义: selenium是自动化测试的一个对象（库）；
+
+2. 作用: 通过该对象调用本地的浏览器进行自动化测试；
+
+3. 安装步骤:
+
+ 3.1 在pythoy安装目录下的script文件夹写通过pip install selenium命令进行安装selenium；
+
+ 3.2 在pycharm编辑工具中添加python编译器，查看编译器中是否含有selenium对象;
+
+ 3.3 当python编译器中含有selenium对象后，开始下载浏览器所对应的浏览器驱动器
+
+ 3.4 将下载好的驱动器.exe文件放在浏览器的安装目录下
+
+ 3.5 python中有selenium对象并且浏览器也有驱动器后
+
+ 3.6 创建一个python文件，在文件的第一行通过from selenium import webdriver导入webdriver对象
+
+ 3.7 通过webdriver.Chrome(传入谷歌浏览器的驱动器路径)或者webdriver.Firefox(传入火狐浏览器的驱动器路径)
+ 
+     或者webdriver.Ie(传入IE浏览器的驱动器路径)调用本地浏览器；
+
+ 3.8 通过一个变量接受返回的浏览器对象
+
+ 3.9 通过浏览器对象.get(请求的路径)可以在打开的浏览器的地址栏中自动输入指定的访问路径并自动访问
+
+ 3.10通过time对象可以让操作暂时停顿，单位是秒;
+
+ 3.11浏览器对象的选择器有:
+
+    1. id选择器:  find_element_by_id(标签id属性的值)  通过find_element_by_id可以获取页面中的标签
+
+    2. 超链接选择器: find_element_by_link_text("超链接的内容") 通过find_element_by_link_text可以获取某一个超链接
+
+    3. xpath选择器: find_element_by_xpath(标签xpath路径) 通过find_element_by_xpath可以获取指定的xpath路径标签
+
+    4. name选择器: find_element_by_name(标签name属性的值) 通过find_element_by_name可以获取指定name属性的标签
+
+3.12获取标签后，如果要给文本框赋值通过标签.send_keys(要赋值的内容);
+
+3.13获取按钮或者超链接后，通过调用click方法触发单击事件
+
+3.14通过调用浏览器的get方法可以访问指定的网址；
+
+3.15通过调用浏览器的close方法可以关闭本地调用的浏览器
